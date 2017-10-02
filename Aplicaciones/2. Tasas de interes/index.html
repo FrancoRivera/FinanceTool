@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Finanzas - Unidad 1</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+    <style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+    }
+
+    .content {
+        padding: 0 20px;
+    }
+
+    ul.multi-columns {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul.multi-columns>li {
+        width: 24%;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+    }
+
+    @media screen and (max-width:1250px) {
+
+        ul.multi-columns>li {
+            width: 30%
+        }
+    }
+
+    @media screen and (max-width:750px) {
+
+        ul.multi-columns>li {
+            width: 45%
+        }
+    }
+
+    ul.multi-columns>li:before {
+        content: '+';
+        padding: 5px;
+        margin-right: 5px;
+        /* you can tweak the gap */
+        color: orange;
+        background-color: white;
+        /* in case you want a color... */
+        display: inline-block;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1 class="text-center">Finanzas</h1>
+        <h2>Unidad 2: Tasas de Interes</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"><h3>Tres principios fundamentales</h3></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"><h3> I) I = S - Capital</h3></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"><h3> II) I = C * i * t</h3></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"><h3> III) S = C * (1 + i * t) </h3></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                     Tasa de interes simple por tiempo:
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                <div class="row">
+                    <div class="col-md-12"><label for="tiempo">Tiempo: </label></div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-12"><input type="text" name="tiempo" class="form-control" placeholder="Tiempo" /></div>
+                </div>
+                </div>
+                <div class="col-md-2">
+                <div class="row">
+                    <div class="col-md-12"><label for="tasa_simple">Tasa Simple: </label></div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-12"><input type="text" name="tasa_simple" class="form-control" placeholder="Tasa Simple" /></div>
+                </div>
+                </div>
+                 <div class="col-md-2">
+                <div class="row">
+                    <div class="col-md-12"><label for="monto">Monto: </label></div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-12"><input type="text" name="monto" class="form-control" placeholder="Monto" /></div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        
+        
+        <div>
+           
+        </div>
+        <div>
+           
+        </div>
+        <div>
+            
+            
+        </div>
+        Tiempo
+        <h3>Empirica</h3>
+        <label for="monto">Monto: </label>
+        <input type="text" name="monto" placeholder="Monto" />
+        <label for="total">Total: </label>
+        <input type="text" name="total" placeholder="Total" />
+        <label for="compound">Compuesta</label>
+        <select name="compuesta" id="">
+            <option value="1">Diaria</option>
+        </select>
+        <label for="tasa_efectiva">Tasa Efectiva</label>
+        <input type="text" name="tasa_efectiva" placeholder="Tasa Efectiva">
+        <label for="tasa_nominal">Tasa Nominal</label>
+        <input type="text" name="tasa_nominal" placeholder="Tasa Nominal"> >usar un slider para la tasa de interes y un textbox
+        <h2>Tasa Nominal a Efectiva</h2>
+    </div>
+    <!-- End of div content -->º
+    <!-- jQuery -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="Hello World"></script>
+    <script>
+    function TSxTiempo(tasa, monto, tiempo) { /* Tasa simple en el tiempo*/
+
+        i = 0
+
+    }
+    </script>
+    <script>
+    /*Smooth scroll by Justin @StackOverflow*/
+    $('a[href*="#"]:not([href="#"])').on('click', function(event) {
+        event.preventDefault();
+        var element = $(this.hash);
+        $('html,body').animate({ scrollTop: element.offset().top - 20 /*Padding top*/ }, 'normal', 'swing');
+    });
+    </script>
+</body>
+
+</html>
