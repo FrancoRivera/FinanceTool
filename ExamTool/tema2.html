@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <title>The tool</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    <style>
+        .btn_metodo{
+            opacity: 0.5;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .btn_metodo_activo{
+            opacity: 1;
+            border: 3px solid #3535bb;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Exam Tool</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"><a  class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tema2.html">Dinero en el Tiempo y Tasas</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="/tema3.html">Ecuacion equiv Valor</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="/tema4.html">Instrum Financ.</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="/tema5.html">Planes de Pago</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="margin_100"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-12 h3">
+                        Dias entre fechas:
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <input class="datepicker form-control" id="dias_ini" data-provide="datepicker" placeholder="Inicio">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="datepicker form-control" id="dias_fin" placeholder="Fin">
+                    </div>
+                    <div class="col-md-3" id="cant_Dias"></div>
+                </div>
+                <div class="margin_30"></div>
+                <div class="row h3">
+                    Valor Futuro o Valor deseado: $$ S = C * (1 + \frac{TN}{m})^n $$
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for=""><a class="tiptool" title="Valor Futuro o Ahorro Deseado (S)">S (V. Futuro)</a></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="number" class="form-control VF" id="VF_S" placeholder="S">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for=""><a class="tiptool" title="Valor Presente o Capital Inicial (C)">C (V. Presente)</a></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="number" class="form-control VF" id="VF_C" placeholder="C">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for=""><a class="tiptool" title="Tasa de Interes Compuesta o Nominal">TN (Tasa Nominal)</a></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="number" class="form-control VF" id="VF_TN" placeholder="TN">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for=""><a class="tiptool" title="Número de períodos de capitalización que existen en el tiempo que está expresada la Tasa de Interés Compuesta o Nominal (TN).
+Matemáticamente se calcula como el número de días en el que se expresa la Tasa de Interés Compuesta o Nominal (TN) entre el número de días en que se expresa el período de capitalización.">M</a></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="number" class="form-control VF" id="VF_m" placeholder="m">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for=""><a class="tiptool" title="Número de períodos de capitalización que existen en el tiempo transcurrido (t) de la inversión.
+Matemáticamente se calcula como el tiempo transcurrido (t) expresado en días entre el número de días en que se expresa el período de capitalización.">n</a></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="number" class="form-control VF" id="VF_n" placeholder="n">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 h3" id="VF_Procedimiento"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 h3">
+                        Tasa Efectiva $$ TEP = (\frac{S}{C}-1)*100 \% $$
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for=""><a class="tiptool" title="Tasa Efectiva del Periodo (TEP)">TEP</a></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="number" class="form-control TE" id="TE_TEP" placeholder="TEP">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for=""><a class="tiptool" title="Valor Futuro o Ahorro Deseado (S)">S (V. Futuro)</a></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="number" class="form-control TE" id="TE_S" placeholder="S">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for=""><a class="tiptool" title="Valor Presente o Capital Inicial (C)">C (V. Presente)</a></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="number" class="form-control TE" id="TE_C" placeholder="C">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 h3" id="TE_Procedimiento"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 h3">
+                        Tasa Nominal a Efectiva $$ TEP = (1+\frac{TN}{m})^n*100 \% $$
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for=""><a class="tiptool" title="Tasa Efectiva del Periodo (TEP)">TEP</a></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="number" class="form-control TNaE" id="TNaE_TEP" placeholder="TEP">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for=""><a class="tiptool" title="Tasa Nominal del Periodo">TN</a></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="number" class="form-control TNaE" id="TNaE_TN" placeholder="TN">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for=""><a class="tiptool" title="Número de períodos de capitalización que existen en el tiempo que está expresada la Tasa de Interés Compuesta o Nominal (TN).
+Matemáticamente se calcula como el número de días en el que se expresa la Tasa de Interés Compuesta o Nominal (TN) entre el número de días en que se expresa el período de capitalización.">M</a></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="number" class="form-control TNaE" id="TNaE_m" placeholder="m">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for=""><a class="tiptool" title="Número de períodos de capitalización que existen en el tiempo transcurrido (t) de la inversión.
+Matemáticamente se calcula como el tiempo transcurrido (t) expresado en días entre el número de días en que se expresa el período de capitalización.">n</a></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="number" class="form-control TNaE" id="TNaE_n" placeholder="n">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 h3" id="TNaE_Procedimiento"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 h3">
+                        Tasa Nominal a Efectiva $$ TEP = (1+\frac{TN}{m})^n*100 \% $$
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for=""><a class="tiptool" title="Tasa Efectiva del Periodo (TEP)">TEP</a></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="number" class="form-control TNaE" id="TNaE_TEP" placeholder="TEP">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for=""><a class="tiptool" title="Tasa Nominal del Periodo">TN</a></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="number" class="form-control TNaE" id="TNaE_TN" placeholder="TN">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for=""><a class="tiptool" title="Número de períodos de capitalización que existen en el tiempo que está expresada la Tasa de Interés Compuesta o Nominal (TN).
+Matemáticamente se calcula como el número de días en el que se expresa la Tasa de Interés Compuesta o Nominal (TN) entre el número de días en que se expresa el período de capitalización.">M</a></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="number" class="form-control VF" id="" placeholder="m">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for=""><a class="tiptool" title="Número de períodos de capitalización que existen en el tiempo transcurrido (t) de la inversión.
+Matemáticamente se calcula como el tiempo transcurrido (t) expresado en días entre el número de días en que se expresa el período de capitalización.">n</a></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="number" class="form-control VF" id="" placeholder="n">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 h3" id="TNaE_Procedimiento"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 h3">
+                        II) $$ I=C*i*t $$
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 h3">
+                        III) $$ TEP = (\frac{I}{C}) * 100 $$
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-12 h2">
+                        Principios Fundamentales
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 h3">
+                        I) $$I=S-C$$
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 h3">
+                        II) $$ I=C*i*t $$
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 h3">
+                        III) $$ TEP = (\frac{I}{C}) * 100 $$
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- /.container -->
+    <div class="side_bar">
+        <a href="#">
+            <div class="toggle_sidebar">Hide</div>
+        </a>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+    <script src='../assets/js/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    <script src="../assets/js/main.js"></script>
+   
+
+
+
+</body>
+
+</html>

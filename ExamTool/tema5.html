@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <title>The tool</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="all" href="../assets/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+</head>
+
+<body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Exam Tool</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"><a  class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tema2.html">Dinero en el Tiempo y Tasas</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="/tema3.html">Ecuacion equiv Valor</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="/tema4.html">Instrum Financ.</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="/tema5.html">Planes de Pago</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="margin_50"></div>
+    <div class="container">
+        <h2 id="tema4">Planes de Pago</h2>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3">
+                                <div class="btn_metodo btn_metodo_activo" metodo="Frances">
+                                    Frances <img src="../assets/flags/flat/32/France.png" class="p-3" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                                <div class="btn_metodo" metodo="Aleman">
+                                    Aleman <img src="../assets/flags/flat/32/Germany.png" class="p-3" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                                <div class="btn_metodo" metodo="Americano">
+                                    Americano <img src="../assets/flags/flat/32/United-States.png" class="p-3" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                                <div class="btn_metodo" metodo="Peruano">
+                                    Peruano <img src="../assets/flags/flat/32/Peru.png" class="p-3" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Datos</h2>
+                        <div class="row">
+                            <div class="col-md-2 col-sm-3">
+                                <h5>TCEA</h5>
+                                <input type="text" class="pdp_input form-control" placeholder="TCEA" id="met_tcea" value="10"> </div>
+                            <div class="col-md-2 col-sm-3">
+                                <h5>Precio Venta</h5>
+                                <input type="text" class="pdp_input form-control" placeholder="Precio Venta" id="precio_venta" value="125000">
+                            </div>
+                            <div class="col-md-2 col-sm-3">
+                                <h5>% Cuota Inicial</h5>
+                                <input type="text" class="pdp_input form-control" placeholder="% cuota inicial" id="perc_cuota_inicial" value="20">
+                            </div>
+                            <div class="col-md-2 col-sm-3">
+                                <h5>Frecuencia</h5>
+                                <input type="text" class="pdp_input form-control" placeholder="Frecuencia" id="frecuencia" value="Semestral">
+                            </div>
+                            <div class="col-md-2 col-sm-3">
+                                <h5>Num. de Años</h5>
+                                <input type="text" class="pdp_input form-control" placeholder="Numero de Años" id="nAños" value="3"> </div>
+                            <div class="col-md-2 col-sm-3">
+                                <h5>Dias en el Año</h5>
+                                <input type="text" class="pdp_input form-control" placeholder="Dias x Año" id="diasEnAño" value="360"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin_30"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Resultados</h2>
+                        <div class="row">
+                            <div class="col-2">
+                                <label>Cuota Inicial</label>
+                                <input type="text" class="form-control" placeholder="Cuota Inicial" id="cuota_inicial">
+                            </div>
+                            <div class="col-2">
+                                <label>Prestamo</label>
+                                <input type="text" class="form-control" placeholder="Prestamo" id="prestamo">
+                            </div>
+                            <div class="col-2">
+                                <label>Frec. Dias</label>
+                                <input type="text" class="form-control" placeholder="Frec Dias" id="fecuencia_dias">
+                            </div>
+                            <div class="col-2">
+                                <label>Cuotas x Año</label>
+                                <input type="text" class="form-control" placeholder="Cuotas x Año" id="cuotas_año">
+                            </div>
+                            <div class="col-2">
+                                <label>Numero Cuotas</label>
+                                <input type="text" class="form-control" placeholder="Numero Cuotas" id="num_cuotas">
+                            </div>
+                            <div class="col">
+                                <label>Interes</label>
+                                <input type="text" class="form-control" placeholder="Interes" id="interes">
+                            </div>
+                            <div class="col">
+                                <label>Amortizacion</label>
+                                <input type="text" class="form-control" placeholder="Amortizacion" id="amortizacion">
+                            </div>
+                            <div class="col">
+                                <label>Cuotas</label>
+                                <input type="text" class="form-control" placeholder="Cuota" id="cuota_suma">
+                            </div>
+                            <div class="col">
+                                <label>TIR</label>
+                                <input type="text" class="form-control" placeholder="TIR" id="tir">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin_50"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>TEA</th>
+                                    <th>TEP</th>
+                                    <th>PG</th>
+                                    <th>Saldo Inicial</th>
+                                    <th>Interes</th>
+                                    <th>Cuota</th>
+                                    <th>Amort</th>
+                                    <th>Saldo Final</th>
+                                    <th>Flujo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="pdp_body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <canvas id="pdp_graph"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of row Planes de Pago-->
+        <div class="margin_100"></div>
+    </div> <!--end of container -->
+            
+
+    <!-- /.container -->
+    <div class="side_bar">
+        <a href="#">
+            <div class="toggle_sidebar">Hide</div>
+        </a>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+    <script src='../assets/js/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    <script src="../assets/js/main.js"></script>
+    
+
+
+</body>
+
+</html>
